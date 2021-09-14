@@ -1,0 +1,43 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[{
+"base": "Node",
+"class": &"Authentication",
+"language": &"GDScript",
+"path": "res://src/network/authentication.gd"
+}]
+_global_script_class_icons={
+"Authentication": ""
+}
+
+[application]
+
+config/name="FeudalMP4.0"
+run/main_scene="res://root.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Logger="*res://src/util/Logger.gd"
+Network="*res://src/network/network.tscn"
+
+[editor]
+
+node_naming/name_casing=1
+
+[feudalmp]
+
+network/server/port=9983
+network/server/max_players=200
+
+[rendering]
+
+environment/defaults/default_environment="res://default_env.tres"

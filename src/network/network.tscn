@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfrpiklbg675q"]
+
+[ext_resource type="Script" path="res://src/network/client.gd" id="1_8vey5"]
+[ext_resource type="Script" path="res://src/network/server.gd" id="2_8qv5e"]
+[ext_resource type="Script" path="res://src/network/authentication.gd" id="3_taha4"]
+
+[node name="network" type="Node"]
+script = null
+
+[node name="client" type="Node" parent="."]
+script = ExtResource( "1_8vey5" )
+
+[node name="server" type="Node" parent="."]
+script = ExtResource( "2_8qv5e" )
+
+[node name="authentication" type="Node" parent="."]
+script = ExtResource( "3_taha4" )
